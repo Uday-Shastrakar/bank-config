@@ -40,13 +40,13 @@ feign:
 
 # Add URLs for service feign clients
 card-service:
-  url: http://192.168.1.100:9096
+  url: http://localhost:9094
 
 account-service:
-  url: http://192.168.1.100:9095
+  url: http://localhost:9095
 
 customer-service:
-  url: http://192.168.1.100:9094
+  url: http://localhost:9096
 
 email-service:
   url: http://192.168.1.100:9097
@@ -54,17 +54,7 @@ email-service:
 server:
   port: 9093
 
-logging:
-  level:
-    feign:
-      client:
-        config:
-          default: TRACE
-          email-service: TRACE
-    org.springframework: DEBUG
-    org.hibernate.SQL: DEBUG
-    org.springframework.security: DEBUG
-    com.example.authentication: DEBUG
+
 
 eureka:
   instance:
