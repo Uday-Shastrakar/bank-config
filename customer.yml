@@ -21,3 +21,15 @@ info:
 server:
   port: 9094
 
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://192.168.1.100:8761/eureka  
+
+
+  
+
