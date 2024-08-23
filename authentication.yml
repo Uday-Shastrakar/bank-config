@@ -43,7 +43,7 @@ account-service:
   url: http://localhost:9095
 
 customer-service:
-  url: http://localhost:9094
+  url: http://192.168.1.100:9094
 
 email-service:
   url: http://192.168.1.100:9097
