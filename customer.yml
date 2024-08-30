@@ -17,6 +17,14 @@ info:
     name: "customer"
     description: "Application for online banking accounts."
     version: "1.0"
+feign:
+  client:
+    config:
+      account-service:
+        url: ${account-service.url}
+account-service:
+  url: http://192.168.1.100:9095
+    
 
 server:
   port: 9094
