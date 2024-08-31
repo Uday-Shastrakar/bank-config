@@ -2,19 +2,7 @@ spring:
   application:
     name: gateway
 
-  cloud:
-    gateway:
-      discovery:
-        locator:
-          enabled: true
-          lowerCaseServiceId: true
-      routes:
-        - id: authentication-service
-          uri: lb://AUTHENTICATION
-          predicates:
-            - Path=/bank/authentication/**
-          filters:
-            - StripPrefix=1
+
 
 management:
   endpoints:
