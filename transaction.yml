@@ -1,1 +1,35 @@
+spring:
+  application:
+    name: transaction
 
+
+
+  datasource:
+    url: jdbc:mysql://192.168.1.100:3306/transaction
+    username: bankuser
+    password: numsbank
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  liquibase:
+    change-log: classpath:db/changelog/changelog-master.yaml
+
+
+info:
+  app:
+    name: "transaction"
+    description: "Application for online banking accounts."
+    version: "1.0"
+
+server:
+  port: 9096
+
+
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://192.168.1.100:8761/eureka
