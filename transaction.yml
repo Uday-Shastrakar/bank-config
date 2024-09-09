@@ -17,7 +17,7 @@ spring:
 info:
   app:
     name: "transaction"
-    description: "Application for online banking accounts."
+    description: "Application for online banking transactions."
     version: "1.0"
 
 server:
