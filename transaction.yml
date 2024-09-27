@@ -26,11 +26,11 @@ server:
 feign:
   client:
     config:
-      transaction-service:
-        url: ${transaction-service.url}
+      account-service:
+        url: ${account-service.url}
 
-transaction-service:
-  url: http://localhost:9096
+account-service:
+  url: http://localhost:9095
 
 eureka:
   instance:
