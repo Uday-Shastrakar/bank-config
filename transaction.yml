@@ -23,7 +23,14 @@ info:
 server:
   port: 9096
 
+feign:
+  client:
+    config:
+      transaction-service:
+        url: ${transaction-service.url}
 
+transaction-service:
+  url: http://localhost:9096
 
 eureka:
   instance:
