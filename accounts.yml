@@ -22,6 +22,28 @@ info:
 server:
   port: 9095
 
+  cloud:
+    stream:
+      bindings:
+       sendCommunication-out-O:
+         destination: send-communication
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    connection-timeout: 10s
+
+feign:
+  client:
+    config:
+      customer-service:
+        url: ${customer-service.url}
+
+customer-service:
+  url: http://localhost:9095
+
 
 
 eureka:
