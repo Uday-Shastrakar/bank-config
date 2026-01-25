@@ -3,9 +3,9 @@ spring:
     name: "customer"
 
   datasource:
-    url: jdbc:mysql://192.168.1.100:3306/customer
-    username: bankuser
-    password: numsbank
+    url: jdbc:mysql://localhost:3306/customer
+    username: root
+    password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   liquibase:
@@ -23,7 +23,7 @@ feign:
       account-service:
         url: ${account-service.url}
 account-service:
-  url: http://192.168.1.100:9095
+  url: http://localhost:9095
     
 
 server:
@@ -36,7 +36,7 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      defaultZone: http://192.168.1.100:8761/eureka  
+      defaultZone: http://localhost:8761/eureka  
 
 
   
